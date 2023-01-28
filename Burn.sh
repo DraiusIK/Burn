@@ -14,9 +14,9 @@ sleep $TEMPO_ESPERA
 
 if [ -d "$DIRETORIO" ]; then
     rm -r "$DIRETORIO"
-    echo "$DIRETORIO foi excluído."
+    echo "$DIRETORIO excluído com sucesso."
 else
-    echo "$DIRETORIO não existe."
+    echo "$DIRETORIO o diretório não existe."
 fi
 
 # Desligando a máquina - isso será mais eficaz se seu HD/SSD estiver criptografado!

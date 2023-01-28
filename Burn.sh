@@ -1,22 +1,23 @@
-#!/bin/bash
+# Definir o diretório a ser excluído
+echo "Insira o caminho do diretório a ser excluído: "
+read DIRETORIO
 
-# Defina o diretório que deseja ser (excluído) de forma manual.
-DIRETORIO="/home/draius/****"
+# Definir o tempo de espera (em segundos)
+echo "Insira o tempo de espera antes da exclusão (em segundos): "
+read TEMPO_ESPERA
 
-# Define o tempo de espera antes da exclusão (em segundos) de forma manual.
-TEMPO_ESPERA=60
-
-#Será exibida uma informação que o diretório será excluída (em segundos)
+# Uma mensagem será exibida informando que o diretório será excluído em segundos
 echo "O diretório $DIRETORIO será excluído em $TEMPO_ESPERA segundos."
 
-# O tempo está rodando para o arquivo ser (excluído)
+# O tempo está correndo :)
 sleep $TEMPO_ESPERA
 
-# Exclusão do diretório
-rm -r $DIRETORIO
+if [ -d "$DIRETORIO" ]; then
+    rm -r "$DIRETORIO"
+    echo "$DIRETORIO foi excluído."
+else
+    echo "$DIRETORIO não existe."
+fi
 
-# Mensagem informando que o diretório foi excluído.
-echo "O diretório $DIRETORIO foi excluído."
-
-# Desliga a máquina - Caso seu HD/SSD Seja criptografado será mais eficaz :)
+# Desligando a máquina - isso será mais eficaz se seu HD/SSD estiver criptografado!
 poweroff

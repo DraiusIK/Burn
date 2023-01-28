@@ -1,6 +1,10 @@
-# Burn
+# Burn 0.3
 
-##### AVISO: Talvez eu torne o código mais interativo
+O script solicita ao usuário para inserir o caminho do diretório a ser excluído e o tempo de espera antes da exclusão.
+Em seguida, ele exibe uma mensagem informando que o diretório será excluído em segundos.
 
-Burn é um script automatizado para exclusão de arquivos privativos, caso tenha algum arquivo que possa te cumprimentar com 1 Click estará resolvido, não esqueça de mover o script para /etc/bin. Todas as funções do script são mudadas diretamente no código. Exemplo: suponhamos que você precisa de deletar os arquivos rapidamente, basta zerar o tempo de espera (TEMPO_ESPERA=0)
+Então, o script usa o comando sleep para esperar pelo tempo de espera antes de continuar com a exclusão.
+Se o diretório especificado existir, o script usa o comando rm -r para excluir o diretório e suas subpastas e arquivos.
+Se o diretório não existir, ele exibe uma mensagem informando que (o diretório não existe)
 
+Finalmente, o script usa o comando poweroff para desligar a máquina.

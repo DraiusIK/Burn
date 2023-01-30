@@ -6,7 +6,7 @@ read DIRETORIO
 echo "Insira o tempo de espera antes da exclusão (em segundos): "
 read TEMPO_ESPERA
 
-# Uma mensagem será exibida informando que o diretório será excluído em segundos
+# Uma mensagem será exibida informando que o diretório será excluído
 echo "O diretório $DIRETORIO será excluído em $TEMPO_ESPERA segundos."
 
 # O tempo está correndo :)
